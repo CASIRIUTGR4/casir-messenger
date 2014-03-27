@@ -8,3 +8,10 @@ def index(request):
                }
     
     return render(request, "snapchat/index.html", context)
+
+def dashboard(request):
+    
+    context = {
+               "message" : "Dashboard :  Gestion des messages",
+               }
+    return render(request, "snapchat/dashboard.html", context)
