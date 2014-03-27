@@ -6,7 +6,7 @@ class User(models.Model):
     login = models.CharField(max_length=25)
     password = models.CharField(max_length=20)
     mail = models.EmailField()
-    
+     
 class Message(models.Model):
     id = models.IntegerField(primary_key=True)
     sender = models.ForeignKey('User')
@@ -15,7 +15,7 @@ class Message(models.Model):
     attachment = models.ImageField()
     duration = models.TimeField()
     created = models.DateField()
-    
+     
 class Friend(models.Model):
     idDemande = models.ForeignKey('User')
     idFriend = models.ForeignKey('User')
