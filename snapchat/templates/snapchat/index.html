@@ -4,5 +4,34 @@
 {% block title %}{{ bloc.super }}{% endblock title %}
 
 {% block content %}
-{{ message }}
+<div class="row" style="margin:20px;">
+	
+	
+  <div class="col-md-6" style="margin:10px;background-color:grey;padding:50px;color:white;border:1px solid black;">
+  	<br /><br /><br /><br /><br /><br /><br /><br />
+  	{{ message }}
+  	<br /><br /><br /><br /><br /><br /><br /><br />
+  </div>
+  
+  
+  <div class="col-md-5" style="margin:10px;background-color:grey;padding:50px;color:white;border:1px solid black;">
+  	
+  	<div style="background-color:black;height:40%;margin:10px;padding:10px;">
+  		<br /><br /><br /><br />
+  		{{ connexion }}
+  		<br /><br /><br /><br />
+  	</div>
+  	
+  	
+  	<br /><br />
+  	
+  	<div style="background-color:black;height:60%;margin:10px;padding:10px;">
+  		<br /><br /><br /><br />
+  		{{ inscription }}
+  		<br /><br /><br /><br />
+  	</div>
+  </div>
+  
+  
+</div>
 {% endblock content %}
