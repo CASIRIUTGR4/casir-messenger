@@ -11,3 +11,5 @@ Note du prof (tableau)
 5)python manage.py schemamigration XXX --auto
 
 6)python manage.py migrate XXX
+
+maj fichier pour test commit vrai profil loic (bloqué sur chnateag, profil gaetan)
