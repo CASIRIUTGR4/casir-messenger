@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from django.shortcuts import render,redirect
+from django.shortcuts import *
 from django.contrib.auth import authenticate, login
 
 def index(request):
@@ -13,21 +13,20 @@ def index(request):
     if request.POST:
         username = request.POST['login']
         password = request.POST['password']
-        user = authenticate(username=login, password=password)
+        user = authenticate(username=username, password=password)
         if user is not None:
             if user.is_active:
                 login(request, user)
-                return redirect(request, 'snapchat/dashboard.html')
+                return HttpResponseRedirect("snapchat/dashboard")
             else:
-                context = {
-                           "disable_account": "Ce compte est désactivé !"
-                           }
+                error = {"disable_account": "Ce compte est désactivé !"}
+                context.update(error)
+                return render(request, "snapchat/index.html", context)
         else:
-            context = {
-                       "wrong_logins": "Vos identifiants sont erronés !"
-                       }
-    else:   
-        return render(request, "snapchat/index.html", context)
+            error = {"wrong_logins": "Vos identifiants sont erronés !"}
+            context.update(error)
+  
+    return render(request, "snapchat/index.html", context)
     
 
 def dashboard(request):
