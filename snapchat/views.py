@@ -4,9 +4,9 @@ from django.shortcuts import render
 def index(request):
     
     context = {
-               "message": "Page d'accueil et d'authentification",
-               "connexion":"Zone de connexion",
-               "inscription": "Zone d'inscription",
+               "message": "CASIR Messenger la messagerie éphémère !",
+               "connexion":"Se connecter",
+               "inscription": "Nouveau sur CASIR Messenger ?",
                }
     
     return render(request, "snapchat/index.html", context)
