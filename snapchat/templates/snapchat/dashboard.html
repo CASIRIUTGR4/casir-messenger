@@ -4,13 +4,46 @@
 {% block title %}{{ bloc.super }}{% endblock title %}
 
 {% block content %}
-<div class="panel panel-default">
-  <!-- Default panel contents -->
-  <div class="panel-heading">Dashboard</div>
-  <div class="panel-body">
-    <p>{{ message }}</p>
-  </div>
 
+	<div class="jumbotron" style="margin:20px;">
+		  <h2>Dashboard</h2>
+		  
+		  <p>{{ message }}</p>
+		  
+
+		  <p><a class="btn btn-primary btn-lg" role="button">En savoir +</a></p>
+		  
+	</div>
+  
+
+	<div class="col-md-3" style="margin:0px;/*background-color:grey;*/padding:10px;/*border:1px solid black;*/">
+		<div class="panel panel-default">
+			<div class="panel-heading">Mes amis</div>
+			<div class="panel-body">
+				<table class="table table-hover table-condensed">
+					<tr class="success">
+						<td><span class="glyphicon glyphicon-user"></span></td>
+						<td>Morpheus</td>
+						<td><span class="badge">1</span></td>
+					</tr>
+					<tr class="">
+						<td><span class="glyphicon glyphicon-user"></span></td>
+						<td>Trinity</td>
+						<td><span class="badge">2</span></td>
+					</tr>
+				</table>
+					
+				
+				<button type="button" class="btn btn-default">Ajouter un ami</button>
+			</div>
+		</div>
+	</div>
+
+<div class="col-md-9" style="margin:0px;/*background-color:grey;*/padding:10px;/*border:1px solid black;*/">
+	<button type="button" class="btn btn-default">Nouveau message</button>
+	<span style="margin-right:20px;"></span>
+	<button type="button" class="btn btn-default">Demande(s) en attente <span class="badge" style="margin-left:7px;">1</span></button>
+	<br/><br/>
   <!-- Table -->
   <table class="table table-responsive">
     <tr>
@@ -18,7 +51,36 @@
     	<th>Date</th>
     	<th>Etat</th>
 	</tr>
-    <tr><td>blabla</td><td>blabla</td><td>blabla</td></tr>
+    <tr class="active">
+    	<td>Morpheus</td>
+    	<td>09/07/2002</td>
+    	<td>Détruire l'agent Smith</td>
+    </tr>
+    <tr class="active">
+    	<td>Trinity</td>
+    	<td>05/07/2002</td>
+    	<td>Sortie CyberCafé</td>
+    </tr>
+    <tr class="active">
+    	<td>Trinity</td>
+    	<td>05/07/2002</td>
+    	<td>Tu décroches un jour ?</td>
+    </tr>
+    <tr>
+    	<td>Trinity</td>
+    	<td>02/07/2002</td>
+    	<td>Follow the white rabbit</td>
+    </tr>
   </table>
+  
+  <br/>
+	<ul class="pagination" style="float:right;">
+		<li><a href="#">&laquo;</a></li>
+		<li><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+		<li><a href="#">&raquo;</a></li>
+	</ul>
+
 </div>
 {% endblock content %}
