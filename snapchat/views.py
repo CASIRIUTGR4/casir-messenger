@@ -1,10 +1,11 @@
+# -*- coding: utf-8 -*-
 from django.shortcuts import render
 
 # Create your views here.
 def index(request):
     
     context = {
-               "message": "CASIR Messenger la messagerie éphémère !",
+               "message": u"CASIR Messenger la messagerie éphémère",
                "connexion":"Se connecter",
                "inscription": "Nouveau sur CASIR Messenger ?",
                }
