@@ -5,6 +5,8 @@ def index(request):
     
     context = {
                "message": "Page d'accueil et d'authentification",
+               "connexion":"Zone de connexion",
+               "inscription": "Zone d'inscription",
                }
     
     return render(request, "snapchat/index.html", context)
