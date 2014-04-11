@@ -1,6 +1,6 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import patterns, include, url
+from django.views.generic import TemplateView
 
 urlpatterns = patterns('',
-    url("^$", "snapchat.views.index", name="index"),
-    url("^dashboard", "snapchat.views.dashboard", name="dashboard")
+    url(r'^dashboard/$', 'snapchat.views.dashboard', name="dashboard")
 )
