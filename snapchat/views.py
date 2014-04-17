@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import *
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
 
 def index(request):
 
@@ -28,8 +29,8 @@ def index(request):
                 context.update(error)
             
         elif 'registration' in request.POST:
-            error = {"wrong_logins": "Vos identifiants sont erronés !"}
-            context.update(error)
+            user = User(name=request.POST['login'],password=['password'],mail=['mail'])
+            user.save
   
     return render(request, "snapchat/index.html", context)
     
