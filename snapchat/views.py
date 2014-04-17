@@ -29,8 +29,11 @@ def index(request):
                 context.update(error)
             
         elif 'registration' in request.POST:
-            user = User(name=request.POST['r_username'],password=request.POST['r_password'],email=request.POST['r_mail'])
-            user.save
+            user = User.objects.create_user(username=request.POST['r_username'],
+                                            email=request.POST['r_mail'],
+                                            password=request.POST['r_password'])
+            user.is_staff = True
+            user.save()
             inscription = {"inscription": "Votre compte a bien été créé, vous pouvez maintenant vous connecter"}
             context.update(inscription)
   
