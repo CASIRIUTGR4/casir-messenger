@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import *
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 
 def index(request):
@@ -33,6 +33,9 @@ def index(request):
             user.save
             inscription = {"inscription": "Votre compte a bien été créé, vous pouvez maintenant vous connecter"}
             context.update(inscription)
+
+        elif 'logout' in request.GET:
+            logout(request)
   
     return render(request, "snapchat/index.html", context)
     

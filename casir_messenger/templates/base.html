@@ -38,19 +38,27 @@
 			  <div class="container-fluid">
 			    <div class="navbar-header">
 			      <a class="navbar-brand" href="/">Casir messenger</a>
-			    </div>
+			    </div>	
+			    
+    				
 			    
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			    	<ul class="nav navbar-nav navbar-right">
-					    <li class="dropdown">
-					          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Français <b class="caret"></b></a>
+			    		<li class="dropdown">
+					          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					          		{% if user.is_authenticated %}
+					    				{{ user.username }}
+									{% else %}
+					    				Demo
+					    			{% endif %} 
+					          	<b class="caret"></b></a>
 					          <ul class="dropdown-menu">
-					            <li><a href="#">Anglais</a></li>
-					            <li><a href="#">Péruvien</a></li>
+					            <li><a href="#">Préférences</a></li>
 					            <li class="divider"></li>
-					            <li><a href="#">Russe</a></li>
+					            <li><a href="../..">Déconnexion</a></li>
 					          </ul>
 					    </li>
+					    
 			    	</ul>
 			    </div>
 			    
