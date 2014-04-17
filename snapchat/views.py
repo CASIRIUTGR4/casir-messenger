@@ -49,3 +49,10 @@ def dashboard(request):
                "message" : "Dashboard :  Gestion des messages",
                }
     return render(request, "snapchat/dashboard.html", context)
+
+def presentation(request):
+    
+    context = {
+               "message" : "Presentation : Presentation site",
+               }
+    return render(request, "snapchat/presentation.html", context)

@@ -1,4 +1,8 @@
 *.pyc
 .project
 .pydevproject
+<<<<<<< HEAD
 messenger.db
+=======
+messenger.db
+>>>>>>> 9ded858347e010e09c2a60232b034076a670e105

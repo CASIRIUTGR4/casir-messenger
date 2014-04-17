@@ -1,2 +1,3 @@
 DEBUG = True
+TEMPLATE_DEBUG = True
 MODE_DEBUG = True
