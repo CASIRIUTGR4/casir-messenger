@@ -53,6 +53,7 @@
   		<!--{{ inscription }}-->
   		
 		 <form role="form" method="post" action="">
+		 {% csrf_token %}
 		  <div class="form-group">
 		    <label for="exampleInputPseudo">Pseudo</label>
 		    <input name="login" type="text" class="form-control" id="exampleInputPseudo" placeholder="Pseudo">
