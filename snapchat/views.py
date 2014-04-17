@@ -36,6 +36,8 @@ def index(request):
             user.save()
             inscription = {"inscription": "Votre compte a bien été créé, vous pouvez maintenant vous connecter"}
             context.update(inscription)
+        elif 'logout' in request.GET:
+            logout(request)
 
     return render(request, "snapchat/index.html", context)
     
