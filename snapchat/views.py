@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import *
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 
 def index(request):
@@ -31,6 +31,8 @@ def index(request):
         elif 'registration' in request.POST:
             user = User(name=request.POST['login'],password=['password'],mail=['mail'])
             user.save
+        elif 'logout' in request.GET:
+            logout(request)
   
     return render(request, "snapchat/index.html", context)
     
