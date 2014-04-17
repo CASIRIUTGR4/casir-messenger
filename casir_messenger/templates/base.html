@@ -41,26 +41,23 @@
 			    </div>	
 			    
     				
-			    
+			    {% if user.is_authenticated %}
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			    	<ul class="nav navbar-nav navbar-right">
 			    		<li class="dropdown">
 					          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					          		{% if user.is_authenticated %}
-					    				{{ user.username }}
-									{% else %}
-					    				Demo
-					    			{% endif %} 
-					          	<b class="caret"></b></a>
+					          		{{ user.username }}<b class="caret"></b></a>
 					          <ul class="dropdown-menu">
 					            <li><a href="#">Préférences</a></li>
 					            <li class="divider"></li>
 					            <li><a href="../..">Déconnexion</a></li>
 					          </ul>
+					          
 					    </li>
 					    
 			    	</ul>
 			    </div>
+			    {% endif %}
 			    
 			  </div>
 			</nav>
